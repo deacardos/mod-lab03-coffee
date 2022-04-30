@@ -1,11 +1,11 @@
 // Copyright 2022 UNN-IASR
 #include <iostream>
-#include "kofe.h"
+#include "Automata.h"
 
 using std::string;
 
 int main() {
-    kofe machine = kofe();
+    Automata machine = Automata();
     machine.on();
     machine.getMenu();
     machine.coin(20);
