@@ -1,3 +1,4 @@
+//Copyright [year] <Copyright Owner>
 #include <iostream>
 #include "kofe.h"
 
