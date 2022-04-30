@@ -1,10 +1,10 @@
 // Copyright 2022 UNN-IASR
-#include "kofe.h"
+#include "Automata.h"
 
 using std::cout;
 using std::endl;
 
-kofe::kofe() {
+kofe::Automata() {
     cash = 0;
     menu = new std::string[3];
     menu[0] = "Item 1";
@@ -16,37 +16,37 @@ kofe::kofe() {
     prices[2] = 30;
     state = OFF;
 }
-void kofe::on() {
+void Automata::on() {
     if (state == OFF) state = WAIT;
 }
-void kofe::off() {
+void Automata::off() {
     if (state == WAIT) state = OFF;
 }
-void kofe::coin(int money) {
+void Automata::coin(int money) {
     if (state == WAIT) {
         state = ACCEPT;
     }
     cash += money;
 }
-void kofe::getMenu() {
+void Automata::getMenu() {
     for (int i = 0; i < 3; i++) {
         cout << i + 1 << ". " << menu[i] << " " << prices[i] << endl;
     }
 }
-States kofe::getState() {
+States Automata::getState() {
     return state;
 }
-void kofe::choice(int _choice) {
+void Automata::choice(int _choice) {
     if (state == ACCEPT) {
         state = CHECK;
         option = _choice;
     }
 }
-bool kofe::check() {
+bool Automata::check() {
     if (state == CHECK && cash >= prices[option - 1]) return true;
     return false;
 }
-int kofe::cancel() {
+int Automata::cancel() {
     int cash2 = 0;
     if (state == ACCEPT || state == CHECK) {
         state = WAIT;
@@ -55,13 +55,13 @@ int kofe::cancel() {
     }
     return cash2;
 }
-void kofe::cook() {
+void Automata::cook() {
     if (state == CHECK) {
         state = COOK;
         cash -= prices[option - 1];
     }
 }
-int kofe::finish() {
+int Automata::finish() {
     int temp = 0;
     if (state == COOK) {
         state = WAIT;
