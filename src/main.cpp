@@ -1,4 +1,4 @@
-//Copyright [year] <Copyright Owner>
+// Copyright 2022 UNN-IASR
 #include <iostream>
 #include "kofe.h"
 
