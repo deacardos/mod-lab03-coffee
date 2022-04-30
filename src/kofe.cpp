@@ -1,3 +1,4 @@
+Copyright [year] <Copyright Owner>
 #include "kofe.h"
 
 using std::cout;
