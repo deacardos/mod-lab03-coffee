@@ -12,7 +12,7 @@ enum States {
   COOK
 };
 
-class Automata {
+class kofe {
  private:
     int cash;
     string* menu;
@@ -21,7 +21,7 @@ class Automata {
     int option;
 
  public:
-    Automata();
+    kofe();
     void on();
     void off();
     void coin(int money);
