@@ -4,7 +4,7 @@
 using std::cout;
 using std::endl;
 
-kofe::Automata() {
+Automata::Automata() {
     cash = 0;
     menu = new std::string[3];
     menu[0] = "Item 1";
