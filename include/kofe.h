@@ -1,4 +1,4 @@
-// Copyright 2022 UNN-IASR
+Copyright [year] <Copyright Owner>
 #pragma once
 #include <iostream>
 #include <string>
