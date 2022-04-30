@@ -1,17 +1,17 @@
 // Copyright 2022 GHA Test Team
 
 #include <gtest/gtest.h>
-#include "kofe.h"
+#include "Automata.h"
 
 TEST(task1, test1) {
-    kofe machine = kofe();
+    Automata machine = Automata();
     machine.on();
     States result = machine.getState();
     EXPECT_EQ(WAIT, result);
 }
 
 TEST(task2, test2) {
-    kofe machine = kofe();
+    Automata machine = Automata();
     machine.on();
     machine.coin(20);
     States result = machine.getState();
@@ -19,7 +19,7 @@ TEST(task2, test2) {
 }
 
 TEST(task3, test3) {
-    kofe machine = kofe();
+    Automata machine = Automata();
     machine.on();
     machine.coin(50);
     machine.choice(1);
@@ -28,7 +28,7 @@ TEST(task3, test3) {
 }
 
 TEST(task4, test4) {
-    kofe machine = kofe();
+    Automata machine = Automata();
     machine.on();
     machine.coin(50);
     machine.choice(1);
@@ -38,7 +38,7 @@ TEST(task4, test4) {
 }
 
 TEST(task5, test5) {
-    kofe machine = kofe();
+    Automata machine = Automata();
     machine.on();
     machine.coin(50);
     machine.choice(1);
@@ -49,7 +49,7 @@ TEST(task5, test5) {
 }
 
 TEST(task6, test6) {
-    kofe machine = kofe();
+    Automata machine = Automata();
     machine.on();
     machine.coin(50);
     machine.choice(1);
